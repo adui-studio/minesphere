@@ -1,0 +1,20 @@
+{
+  "name": "@minesphere/engine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Unified dual-engine lifecycle and render scheduler.",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts"
+    }
+  },
+  "dependencies": {
+    "@minesphere/coordinate": "workspace:*",
+    "@minesphere/engine-babylon": "workspace:*",
+    "@minesphere/engine-cesium": "workspace:*",
+    "@minesphere/shared": "workspace:*"
+  }
+}

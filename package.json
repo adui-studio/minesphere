@@ -2,10 +2,24 @@
   "name": "minesphere",
   "version": "0.0.0",
   "private": true,
+  "description": "MineSphere 3D Foundation monorepo",
+  "license": "UNLICENSED",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "tooling/*"
+  ],
   "type": "module",
   "scripts": {
+    "dev": "vp dev apps/playground",
+    "dev:all": "vp run -r --parallel dev",
+    "build": "vp run -r build",
+    "build:playground": "vp build apps/playground",
+    "test": "vp run -r test",
+    "test:watch": "vp test watch",
+    "check": "vp check",
+    "check:fix": "vp check --fix",
     "ready": "vp check && vp run -r test && vp run -r build",
-    "dev": "vp run website#dev",
     "prepare": "vp config"
   },
   "devDependencies": {

@@ -1,0 +1,17 @@
+{
+  "name": "@minesphere/core",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Core lifecycle, module registry and service container.",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts"
+    }
+  },
+  "dependencies": {
+    "@minesphere/shared": "workspace:*"
+  }
+}
