@@ -15,11 +15,12 @@
     "dev:all": "vp run -r --parallel dev",
     "build": "vp run -r build",
     "build:playground": "vp build apps/playground",
+    "typecheck": "vp run @minesphere/playground#typecheck",
     "test": "vp run -r test",
     "test:watch": "vp test watch",
-    "check": "vp check",
-    "check:fix": "vp check --fix",
-    "ready": "vp check && vp run -r test && vp run -r build",
+    "check": "vp check && vp run @minesphere/playground#typecheck",
+    "check:fix": "vp check --fix && vp run @minesphere/playground#typecheck",
+    "ready": "vp check && vp run @minesphere/playground#typecheck && vp run -r test && vp run -r build",
     "prepare": "vp config"
   },
   "devDependencies": {
